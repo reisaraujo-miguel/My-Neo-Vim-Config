@@ -15,7 +15,16 @@ return require('packer').startup(function(use)
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-    vim.cmd('colorscheme rose-pine')
+    use { "catppuccin/nvim", as = "catppuccin" }
+
+    vim.cmd('colorscheme catppuccin')
+
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
