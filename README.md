@@ -1,2 +1,2 @@
-# My-Neo-Vim-Config
-Emacs >>>>>>>> Neo-Vim. But I'll give it a chance
+# My-Nvim-Config
+Emacs >>>>>>>> Nvim. But I'll give it a chance
