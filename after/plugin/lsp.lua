@@ -1,9 +1,5 @@
 local lsp = require('lsp-zero').preset({})
 
-vim.diagnostic.config({
-    virtual_text = false,
-})
-
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
     vim.api.nvim_create_autocmd("CursorHold", {
