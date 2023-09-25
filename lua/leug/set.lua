@@ -9,8 +9,6 @@ vim.opt.smartindent = true
 
 vim.opt.hlsearch = false
 
-vim.opt.termguicolors = true
-
 vim.opt.updatetime = 50
 
 vim.opt.cursorline = true

@@ -1,6 +1,6 @@
 require('bufferline').setup({
     options = {
-        separator_style = "slope",
+        --separator_style = "slope",
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = " "
