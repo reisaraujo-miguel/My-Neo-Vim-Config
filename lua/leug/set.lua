@@ -13,6 +13,4 @@ vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
 
-vim.cmd.colorscheme "catppuccin"
-
 vim.opt.colorcolumn = "80"

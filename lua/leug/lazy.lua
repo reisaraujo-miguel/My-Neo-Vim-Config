@@ -54,16 +54,15 @@ require("lazy").setup({
     {
         "windwp/nvim-ts-autotag",
         wants = "nvim-treesitter",
-        -- config = function()
-            -- require("nvim-ts-autotag").setup { enable = true }
-       -- end,
-       opts = { enable = true },
+        config = function()
+            require("nvim-ts-autotag").setup { enable = true }
+        end,
     },
 
     {
         {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-        {'williamboman/mason.nvim'},
 
+        {'williamboman/mason.nvim'},
         {'williamboman/mason-lspconfig.nvim'},
 
         -- LSP Support
