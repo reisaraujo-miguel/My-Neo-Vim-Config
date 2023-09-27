@@ -1,7 +1,7 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero').preset({})
 
-lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({ buffer = bufnr })
     vim.api.nvim_create_autocmd("CursorHold", {
         buffer = bufnr,
         callback = function()
@@ -19,9 +19,9 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
 
-lsp.set_sign_icons({
+lsp_zero.set_sign_icons({
     error = '',
     warn = '',
     hint = '⚑',
@@ -37,4 +37,11 @@ cmp.setup({
     }
 })
 
-lsp.setup()
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    handlers = {
+        lsp_zero.default_setup,
+    }
+})
+
+lsp_zero.setup()
