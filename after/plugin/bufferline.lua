@@ -2,7 +2,7 @@ vim.opt.termguicolors = true
 
 require('bufferline').setup({
     options = {
-        separator_style = "slope",
+        separator_style = "slant",
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = " "

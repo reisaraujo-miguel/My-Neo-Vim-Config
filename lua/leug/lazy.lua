@@ -17,6 +17,10 @@ require("lazy").setup({
 
     'norcalli/nvim-colorizer.lua',
 
+    'rust-lang/rust.vim',
+
+    'simrat39/rust-tools.nvim',
+
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                              , branch = '0.1.x',
@@ -35,7 +39,17 @@ require("lazy").setup({
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        after = 'catppuccin',
+        config = function()
+            require('bufferline').setup {
+                highlights = require("catppuccin.groups.integrations.bufferline").get()
+            }
+        end
+    },
 
     {
         'nvim-lualine/lualine.nvim',
