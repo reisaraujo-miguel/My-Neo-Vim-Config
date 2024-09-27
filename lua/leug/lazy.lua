@@ -21,10 +21,14 @@ require('lazy').setup({
 
 	{ 'simrat39/rust-tools.nvim' },
 
+	{ 'nvim-lua/popup.nvim' },
+
+	{ 'nvim-telescope/telescope-media-files.nvim' },
+
 	{
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.3',
-		-- or                              , branch = '0.1.x',
+		branch = '0.1.x',
+
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 
@@ -73,28 +77,14 @@ require('lazy').setup({
 		end,
 	},
 
-	{
-		{ { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' } },
+	{ 'williamboman/mason.nvim' },
+	{ 'williamboman/mason-lspconfig.nvim' },
 
-		{ 'williamboman/mason.nvim' },
-		{ 'williamboman/mason-lspconfig.nvim' },
+	{ 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+	{ 'neovim/nvim-lspconfig' },
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{ 'hrsh7th/nvim-cmp' },
+	{ 'L3MON4D3/LuaSnip' },
 
-		-- LSP Support
-		{
-			'neovim/nvim-lspconfig',
-			dependencies = {
-				{ 'hrsh7th/cmp-nvim-lsp' },
-			},
-		},
-
-		-- Autocompletion
-		{
-			'hrsh7th/nvim-cmp',
-			dependencies = {
-				{ 'L3MON4D3/LuaSnip' },
-			}
-		}
-	}
+	{ 'mhartington/formatter.nvim' }
 })
-
-vim.g.mapleader = ' ' -- Make sure to set `mapleader` before lazy so your mappings are correct

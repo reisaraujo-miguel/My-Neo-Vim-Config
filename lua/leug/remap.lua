@@ -11,6 +11,9 @@ vim.api.nvim_set_keymap("n", "<leader>mb", ":BufferLineMovePrev<CR>", { silent =
 -- Lsp
 vim.api.nvim_set_keymap("n", "<leader>lf", ":LspZeroFormat<CR>", { noremap = true })
 
+-- Telescope
+vim.api.nvim_set_keymap("n", "ff", ":Telescope find_files<CR>", { noremap = true })
+
 -- Copying/Pasting
 vim.api.nvim_set_keymap("n", "<leader>yy", "\"+yy", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("v", "<leader>y", "\"+y", { silent = true, noremap = true })
